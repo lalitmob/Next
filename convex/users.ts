@@ -16,3 +16,17 @@ export const createUser = internalMutation({
     });
   },
 });
+// export const updateUser = internalMutation({
+//     args : {
+//         clerkId : v.string(),
+//         email : v.string(),
+//         imageUrl : v.string()
+//     },
+//     handler: async(ctx, args)=> {
+//         await ctx.db.patch("updated", {
+//             clerkId : args.clerkId,
+//             email : args.email,
+//             imageUrl : args.imageUrl
+//         })
+//     },
+// })
