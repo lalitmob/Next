@@ -7,15 +7,11 @@ import Image from "next/image";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 
-interface task {
-_id : string,
-text : string
-}
 
    
 
 const Home:React.FC = () => {
-  const tasks = useQuery<Task[]>(api.tasks.get);
+  const tasks = useQuery(api.tasks.get);
 
   return (
     <div className='mt-9 flex- flex-col gap-9'>
