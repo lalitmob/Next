@@ -10,7 +10,7 @@ const Leftsidebar = () => {
    const pathname = usePathname()
    const router = useRouter()
   return (
-     <section className='left-sidebar'>
+     <section className='left_sidebar'>
         <nav className='flex flex-col bg-black-2 gap-6 p-3 h-full '>
             <Link href="/" className='flex cursor-pointer items-center'>
             <Image src="/icons/logo.svg" alt='logo' width={23} height={27}/>
