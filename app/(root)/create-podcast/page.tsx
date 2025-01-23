@@ -65,7 +65,7 @@ const CreatePodcast = () => {
   return (
     <section className="flex flex-col mt-9">
       <Form {...form}>
-        <h1 className="text-lg font-bold text-white">Create Podcast</h1>
+        <h1 className="text-lg font-bold text-white-1">Create Podcast</h1>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="mt-8 flex flex-col w-full "
@@ -76,7 +76,7 @@ const CreatePodcast = () => {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Podcast title</FormLabel>
+                  <FormLabel className="text-16 font-bold text-white-1">Podcast title</FormLabel>
                   <FormControl>
                     <Input
                       className="focus-visible:ring-orange-500 border-none bg-black-2"
@@ -99,14 +99,14 @@ const CreatePodcast = () => {
                   "border-none bg-black-2 focus-visible:ring-orange-500"
                 )}
               >
-                <SelectValue placeholder="select category" />
+                <SelectValue placeholder="select category"/>
               </SelectTrigger>
               <SelectContent className="bg-black-1 text-16 border-none text-white-1 ">
                 {voiceDetails.map(({ id, name }) => (
                   <SelectItem
                     key={id}
                     value={name}
-                    className="capitalize focus-visible:bg-orange-500"
+                    className="capitalize focus-visible:bg-orange-500 text-white-1 "
                   >
                     {name}
                   </SelectItem>
@@ -125,7 +125,7 @@ const CreatePodcast = () => {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description</FormLabel>
+                  <FormLabel className="text-16 font-bold text-white-1">Description</FormLabel>
                   <FormControl>
                     <Textarea
                       className="focus-visible:ring-orange-500 border-none bg-black-2"

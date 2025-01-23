@@ -2,6 +2,7 @@ import Leftsidebar from "../components/Leftsidebar";
 import Image from "next/image";
 import Mobilenav from "../components/Mobilenav";
 import Rightsidebar from "../components/Rightsidebar";
+import { Toaster } from "@/components/ui/toaster";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,8 +18,8 @@ export default function RootLayout({
              <Image src="/icons/logo.svg" alt="menu/icon" width={30} height={30}/>
               <Mobilenav/>
           </div>
-          <div className="flex flex-col md:pb-14  text-white-2">
-            Toaster
+          <div className="flex flex-col md:pb-14 text-white-1">
+            <Toaster/>
             {children}
           </div>
         </div>
