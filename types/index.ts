@@ -61,7 +61,7 @@ export type VoiceType =
 export interface GeneratePodcastProps {
   voiceType: VoiceType;
   setAudioUrl: Dispatch<SetStateAction<string>>;
-  audio: string;
+  audio: string | undefined;
   setAudioStorageId: Dispatch<SetStateAction<Id<"_storage"> | null>>;
   voicePrompt: string;
   setVoicePrompt: Dispatch<SetStateAction<string>>;

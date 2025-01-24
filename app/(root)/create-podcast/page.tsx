@@ -8,12 +8,11 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/ui/form";  
 import {
   Select,
   SelectContent,
@@ -42,15 +41,15 @@ const formSchema = z.object({
 });
 
 const CreatePodcast = () => {
-  const [voiceType, setVoiceType] = useState<string | null>(null);
+  const [voiceType, setVoiceType] = useState<string>(' ');
   const [isLoading, setIsLoading] = useState(false)
   const [imageUrl , setimageUrl] = useState("")
   const [imageStorageId, setImageStorageId] = useState<Id<"_storage"> | null>(null)
   const [imagePrompt, setImagePrompt] =useState('')
   const [audioUrl , setAudioUrl] = useState("")
   const [audioStorageId, setAudioStorageId] = useState<Id<"_storage"> | null>(null)
-  const [audioDuration , setAudioDuration] = useState(0)
-  const [voicePrompt, setVoicePrompt] =useState(null)
+  const [audioDuration , setAudioDuration] = useState<number>(0)
+  const [voicePrompt, setVoicePrompt] =useState<string>('')
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {

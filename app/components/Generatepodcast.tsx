@@ -62,7 +62,6 @@ const useGeneratePodcast = ({
   return { isGenerating, generatePodcast };
 };
 const Generatepodcast = (props: GeneratePodcastProps) => {
-  const [loading, isLoading] = useState(false);
   const { isGenerating, generatePodcast } = useGeneratePodcast(props);
   return (
     <div>
